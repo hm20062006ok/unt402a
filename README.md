@@ -25,7 +25,7 @@ USB_Burning_tool较新的版本(比如3.2)读取系统img时会报错, 2.2xx的�
 ### TODO
 * 获取直播源
 * 更改.img 自启动指定APP
-* u盘安装Armbian
+* u盘安装Armbian(参考:https://github.com/ophub/amlogic-s9xxx-armbian/issues/2347)
 * 打开网络adb调试
 
 
