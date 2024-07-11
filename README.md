@@ -2,7 +2,7 @@
 ## 目的
 废物利用. 希望能实现在盒子上安装一个干净的系统, 连接小雅alist的资源, 抓取配置好本地IPTV直播源. 
 盒子开机后能傻瓜式进入播放器
-## 刷入Android 9
+## 1. 刷入Android 9
 UNT402A自带的Android系统版本太低(应该是4.4), 较新版本的TV-BOX不支持安装, 虽然也能找到支持4.4的 
 
 ### 准备:
@@ -17,12 +17,12 @@ USB_Burning_tool较新的版本(比如3.2)读取系统img时会报错, 2.2xx的�
    ![主板](/board.png "board.png") 
 3. 如果出现错误可以尝试重新插拔USB线连接,再次执行刷机
 
-### 安装TV-BOX
+### 2. 安装TV-BOX
 找个U盘放入TVBox_xxx.apk, 插入盒子, 开机, 文件管理, 安装
 ### 连接Alist-tvbox
 参考: https://github.com/power721/alist-tvbox/blob/master/doc/README_zh.md
 
-### 打开网络adb调试
+### 3. 打开网络adb调试
 通过重新解包/打包img， 修改build.prop实现
 尝试了三个工具[CustomizationTool](https://rdsoftwaregineering.wordpress.com/customization-tool/), [linux-amlogic-toolkit](https://github.com/natinusala/linux-amlogic-toolkit),  [AmlogicKitchen](https://github.com/althafvly/AmlogicKitchen). 前两个打包出来的ROM刷机安装后会卡， 不知道为啥。 AmlogicKitchen好使。 
 #### 使用AmlogicKitchen解包、修改build.prop, 打包
@@ -62,7 +62,7 @@ persist.sys.usb.config=adb
 ```
 
 
-### 启动指定APP
+### 4. 启动指定APP
 level3/boot/ramdisk
 
 // 在init.rc 的onboot 部分指定启动
