@@ -61,9 +61,26 @@ persist.sys.usb.config=adb
 打包完成的img在out目录
 ```
 
+
+### 启动指定APP
+level3/boot/ramdisk
+
+// 在init.rc 的onboot 部分指定启动
+```
+on boot
+   start myappservice
+```
+
+// 在init.rc 的 尾部定义服务
+```
+service myappservice /system/bin/am start -n com.example.youapp/.MainActivity
+   class main
+   user root
+   group root
+   oneshot
+```
 ### TODO
 * 获取直播源
-* 更改.img 自启动指定APP (参考: https://dpkg123.site/2023/12/24/android%20boot.img%20%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E5%8C%85%E3%80%81%E4%BF%AE%E6%94%B9%E4%B8%8E%E9%87%8D%E6%89%93%E5%8C%85%E5%B0%8F%E8%AE%B0/)
 * u盘安装Armbian(参考:https://github.com/ophub/amlogic-s9xxx-armbian/issues/2347)
 
 
